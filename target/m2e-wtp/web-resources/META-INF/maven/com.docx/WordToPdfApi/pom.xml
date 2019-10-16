@@ -48,8 +48,39 @@
 			<version>1.0.3</version>
 		</dependency>
 
+<dependency>
+    <groupId>org.apache.pdfbox</groupId>
+    <artifactId>pdfbox</artifactId>
+    <version>1.8.3</version>
+</dependency>
 
+<!-- https://mvnrepository.com/artifact/org.docx4j/docx4j-export-fo -->
+<dependency>
+    <groupId>org.docx4j</groupId>
+    <artifactId>docx4j-export-fo</artifactId>
+    <version>3.3.0</version>
+</dependency>
 
+<dependency>
+    <groupId>com.itextpdf</groupId>
+    <artifactId>itextpdf</artifactId>
+    <version>5.5.10</version>
+</dependency>
+<dependency>
+    <groupId>com.itextpdf.tool</groupId>
+    <artifactId>xmlworker</artifactId>
+    <version>5.5.10</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>3.15</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-scratchpad</artifactId>
+    <version>3.15</version>
+</dependency>
 
 	</dependencies>
 	<build>

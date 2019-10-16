@@ -25,13 +25,13 @@ public class WordToPdf {
 
 	public static void main(String[] args) {
 
-		/*String inputDocxPathPlusExtension="D:\\doctiger\\aspose_lib\\docx_files\\downloadedFiles\\japanese.docx";
+		String inputDocxPathPlusExtension="D:\\doctiger\\aspose_lib\\docx_files\\downloadedFiles\\japanese.docx";
 		String outputPathPulsExtension="D:\\doctiger\\aspose_lib\\docx_files\\downloadedFiles\\japanese.pdf";
 		
 		String data=wordToPdfMethod(inputDocxPathPlusExtension, outputPathPulsExtension);
-		System.out.println(data);*/
+		System.out.println(data);
 		
-		String inputDocxPathPlusExtension="/home/ubuntu/generationTomcat/apache-tomcat-8.5.41/webapps/ROOT/Attachment/japanese.docx";
+		/*String inputDocxPathPlusExtension="/home/ubuntu/generationTomcat/apache-tomcat-8.5.41/webapps/ROOT/Attachment/japanese.docx";
 		String outputPathPulsExtension="/home/ubuntu/generationTomcat/apache-tomcat-8.5.41/webapps/ROOT/Attachment/japanese.docx";
 		
 		try{
@@ -44,7 +44,7 @@ public class WordToPdf {
 		  
 		}catch(Exception e){
 			e.printStackTrace();
-		}
+		}*/
 		
 	}
 	
@@ -55,9 +55,9 @@ public static String wordToPdfMethod(String inputDocxPathPlusExtension, String o
 			 File inputWord = new File(inputDocxPathPlusExtension);
 			 File outputFile = new File(outputPathPulsExtension);
 			 
-			 File base = new File("/home/ubuntu/generationTomcat/apache-tomcat-8.5.41/webapps/ROOT/Attachment/tempPdfDir");
+//			 File base = new File("/home/ubuntu/generationTomcat/apache-tomcat-8.5.41/webapps/ROOT/Attachment/tempPdfDir");
 			 
-//			 File base = new File("D:\\doctiger\\aspose_lib\\docx_files\\downloadedFiles\\tempPdfDir");
+			 File base = new File("D:\\doctiger\\aspose_lib\\docx_files\\downloadedFiles\\tempPdfDir");
 			 
 		        if (!base.exists()) {
 		            if (base.mkdir()) {
@@ -71,8 +71,9 @@ public static String wordToPdfMethod(String inputDocxPathPlusExtension, String o
 			 
 	         //IConverter converter = LocalConverter.builder().baseFolder(base).workerPool(20, 25, 1, TimeUnit.SECONDS).processTimeout(5, TimeUnit.SECONDS).build();
 	         IConverter converter = LocalConverter.builder().baseFolder(base).workerPool(20, 25, 1, TimeUnit.SECONDS).processTimeout(5, TimeUnit.SECONDS).build();
-	        boolean s = converter.convert(docxInputStream).as(DocumentType.DOCX).to(outputStream).as(DocumentType.PDF).execute();
-	        outputStream.close();
+	       /* boolean s = converter.convert(docxInputStream).as(DocumentType.DOCX).to(outputStream).as(DocumentType.PDF).execute();*/
+	         boolean s = converter.convert(docxInputStream).as(DocumentType.DOCX).to(outputStream).as(DocumentType.PDF).execute();
+	         outputStream.close();
 	         
 	        if(s==true){
 	        	returnData="success";
@@ -144,7 +145,7 @@ public static String getResponseWordToPdfApi(String filePath) {
     String count=null;
 		try {
 
-			URL obj = new URL("http://bizlem.io:8085/WordToPdfApi/WordToPdfServletApi");
+			URL obj = new URL("http://uk.uk.bluealgo.com:8085/WordToPdfApi/WordToPdfServletApi");
 			HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			postConnection.setRequestMethod("POST");
 //			postConnection.setRequestProperty("Content-Type", "application/json");
