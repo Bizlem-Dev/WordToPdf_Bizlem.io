@@ -145,7 +145,7 @@ public static String getResponseWordToPdfApi(String filePath) {
     String count=null;
 		try {
 
-			URL obj = new URL("http://uk.uk.bluealgo.com:8085/WordToPdfApi/WordToPdfServletApi");
+			URL obj = new URL("http://bizlem.io:8085/WordToPdfApi/WordToPdfServletApi");
 			HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			postConnection.setRequestMethod("POST");
 //			postConnection.setRequestProperty("Content-Type", "application/json");

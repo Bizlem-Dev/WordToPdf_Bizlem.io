@@ -21,7 +21,7 @@ public class WindowsWordToPdfConvert {
 
 	public static void main(String[] args) {
 		
-		String UrlLink="http://uk.uk.bluealgo.com:8085/Attachment/555cac45-cc17-4069-9236-0cf0cf51aa84.docx";
+		String UrlLink="http://bizlem.io:8085/Attachment/555cac45-cc17-4069-9236-0cf0cf51aa84.docx";
 //		String data=wordToPdfMethod(UrlLink);
 		String data=checkWordToPdfApi(UrlLink);
 		System.out.println("data: "+data);
